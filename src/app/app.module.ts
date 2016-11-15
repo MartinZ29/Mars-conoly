@@ -4,10 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { RegisterComponent } from './register/register.component';
+import { EncountersComponent } from './encounters/encounters.component';
+import { ReportComponent } from './report/report.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeComponent,
+    RegisterComponent,
+    EncountersComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,
