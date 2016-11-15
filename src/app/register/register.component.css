@@ -31,3 +31,17 @@ input {
     width: 100%;
     background: 0 0;
 }
+
+/*  select form   here !!!!!!!  */
+
+.occ-select {
+    height: 2rem;
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+
+.occ-select select {
+    border: 1px solid transparent;
+    padding-left: 0.5rem;
+    background: 0 0;
+}
