@@ -1,10 +1,27 @@
+
+/*   reg-container  here !!!!!!*/
+
+.reg-container {
+    background: #000;
+}
+
+/*   title  here   !!!!!!!!!  */
 .page-title {
     text-align: center;
     padding: 2rem 1rem;
 }
 
+/*  reg form  here    !!!!!   */
 .reg-form {
-    display: flex;
     width: 100%;
     padding: 0 2rem;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    box-shadow: none;
+    height: 2rem;
+    padding-left: 0.5rem;
+    width: 100%;
 }
