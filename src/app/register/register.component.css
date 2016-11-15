@@ -1,0 +1,10 @@
+.page-title {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.reg-form {
+    display: flex;
+    width: 100%;
+    padding: 0 2rem;
+}
