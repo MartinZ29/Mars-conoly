@@ -46,3 +46,16 @@ input {
     padding-left: 0.5rem;
     background: 0 0;
 }
+
+/*  buttion  here   !!!!!!!*/
+
+.button {
+    width: 100%;
+    color: white;
+    padding: 1rem 2rem;
+    background: #000;
+    font-size: 2rem;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+}
