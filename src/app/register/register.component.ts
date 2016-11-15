@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
 
     jobService.getJobs().subscribe((jobs) => {
       this.marsJob = jobs;
-      console.log(jobs);
+      
     });
    }
 

@@ -8,7 +8,9 @@
       <input type="number" placeholder="Age" [(ngModel)]="colonist.age" name="age" required class="" />
       <div class="occ-select">
         <select required name="occupation" id="" class="">
-          <option value=""></option>
+          <option *ngFor ="let job of marsJob" value="">
+            {{job.name}}
+          </option>
         </select>
       </div>
     </fieldset>
