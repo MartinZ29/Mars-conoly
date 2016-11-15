@@ -4,8 +4,8 @@
 
   <form action="" class="reg-form">
     <fieldset>
-      <input type="text" placeholder="Name" required minlength="3" class="" />
-      <input type="number" placeholder="Age" required class="" />
+      <input type="text" placeholder="Name" [(ngModel)]="colonist.name" name="name" required minlength="3" class="" />
+      <input type="number" placeholder="Age" [(ngModel)]="colonist.age" name="age" required class="" />
       <div class="occ-select">
         <select required name="occupation" id="" class="">
           <option value=""></option>
