@@ -28,7 +28,7 @@ export class Job {
 export class Alliens {
     constructor (
         public type : string,
-        public submitted_by : number,
+        public submitted_by : string,
         public id : number,
         public description : string,
     ){}
