@@ -10,7 +10,9 @@ export class RegisterComponent implements OnInit {
 
   colonist: Colonist;
 
-  constructor() { }
+  constructor() {
+    this.colonist = new Colonist('',null,null,null);
+   }
 
   ngOnInit() {
   }
