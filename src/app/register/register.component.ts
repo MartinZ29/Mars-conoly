@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Colonist } from '../models';
+import { Colonist, Job } from '../models';
 
 @Component({
   selector: 'app-register',
@@ -9,6 +9,9 @@ import { Colonist } from '../models';
 export class RegisterComponent implements OnInit {
 
   colonist: Colonist;
+
+  marsJob:[Job];
+
 
   constructor() {
     this.colonist = new Colonist('',null,null,null);
