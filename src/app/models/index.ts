@@ -11,7 +11,7 @@ export class Encounter {
 export class Colonist {
     constructor(
         public name : string,
-        public job : Job,
+        public job_id : string,
         public id : number,
         public age : number,
     ){}
