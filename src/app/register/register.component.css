@@ -18,6 +18,10 @@
     padding: 0 2rem;
 }
 
+.reg-form input {
+    margin-bottom: 1.5rem;
+}
+
 input {
     border: none;
     border-bottom: 1px solid #fff;
@@ -25,4 +29,5 @@ input {
     height: 2rem;
     padding-left: 0.5rem;
     width: 100%;
+    background: 0 0;
 }
