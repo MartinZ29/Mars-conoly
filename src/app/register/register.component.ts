@@ -27,16 +27,17 @@ export class RegisterComponent implements OnInit {
       });
    }
 
-   onSubmit(){
-     console.log('works?');
-   }
-
   ngOnInit() {
   }
 
 get notSelected (){
   return this.colonist.job_id === this.NO_JOB_SELECTED;
 }
+
+ onSubmit(){
+     alert('works?');
+   }
+
 
 
 }
