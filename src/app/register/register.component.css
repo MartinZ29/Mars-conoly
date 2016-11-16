@@ -31,6 +31,7 @@ input {
     padding-left: 0.5rem;
     width: 100%;
     background: 0 0;
+    color: white;
 }
 
 /*  select form   here !!!!!!!  */
@@ -45,6 +46,7 @@ input {
     border: 1px solid transparent;
     padding-left: 0.5rem;
     background: 0 0;
+    color: white;
 }
 
 /*  buttion  here   !!!!!!!*/

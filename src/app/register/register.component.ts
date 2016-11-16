@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Colonist, Job } from '../models';
+import { NewColonist, Job } from '../models';
 import JobsSerive from '../services/jobs.service';
 
 @Component({
@@ -10,13 +10,13 @@ import JobsSerive from '../services/jobs.service';
 })
 export class RegisterComponent implements OnInit {
 
-  colonist: Colonist;
+  colonist: NewColonist;
 
   marsJob: Job[];
 
 
   constructor(jobService: JobsSerive) {
-    this.colonist = new Colonist('',null,null,null);
+    this.colonist = new NewColonist(null,null,null);
 
     jobService.getJobs().subscribe((jobs) => {
       this.marsJob = jobs;
