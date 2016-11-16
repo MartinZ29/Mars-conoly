@@ -1,8 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Http, Response} from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { Encounter } from '../models';
 
 @Injectable()
-export class EncountersService {
+export default class EncountersService {
 
-  constructor() { }
+
+ENCOUNTER_JSON = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
+
+  constructor( private http: Http) { }
+
+  getEncounter(){
+    console.log(this.http)
+  }
 
 }
