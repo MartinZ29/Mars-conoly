@@ -11,6 +11,8 @@ import { ReportComponent } from './report/report.component';
 import { RouterModule, Routes} from '@angular/router';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 const appRoutes : Routes = [
   {path: 'welcome', component: WelcomeComponent},
   {path: 'register', component: RegisterComponent},
@@ -30,6 +32,7 @@ const appRoutes : Routes = [
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)

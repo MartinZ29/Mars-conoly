@@ -5,14 +5,14 @@
     <span>Safety on Mars is your responsibility</span>
   </h1>
 
-  <from>
+  <form>
     <fieldset>
       <div>
         <select name="alien.type" id="">
-          <option [value]="NO_TYPE_SELECTED">--Select alien type--</option>
-          <option *ngFor ="let alien of alienType" [value]="alien.type">
-            {{alien.type}}
-          </option>
+          <!--<option [value]="NO_TYPE_SELECTED">Select alien type</option> -->
+          <!--<option *ngFor ="let alien of alienType" [value]="alien.type">-->
+            <!--{{alien.type}}-->
+          <!-- </option>-->
         </select>
       </div>
 
@@ -25,5 +25,5 @@
         Submit Report
       </button>
     </fieldset>
-  </from>
+  </form>
 </div>

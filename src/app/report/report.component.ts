@@ -10,18 +10,18 @@ import AliensService from '../services/aliens.service';
 })
 export class ReportComponent implements OnInit {
 
-  alienType: Aliens[];
+  // alienType: Aliens[];
 
-  NO_TYPE_SELECTED = '(none)';
+  // NO_TYPE_SELECTED = '(none)';
 
-  constructor(aliensService: AliensService) { 
+  // constructor(aliensService: AliensService) { 
 
-    aliensService.getAliens().subscribe((types) => {
-      this.alienType = types;
-    }, (err) => {
-      console.log(err)
-    });
-  }
+  //   aliensService.getAliens().subscribe((types) => {
+  //     this.alienType = types;
+  //   }, (err) => {
+  //     console.log(err)
+  //   });
+  // }
 
   ngOnInit() {
   }

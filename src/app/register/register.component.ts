@@ -24,8 +24,9 @@ export class RegisterComponent implements OnInit {
   NO_JOB_SELECTED = '(none)';
 
 
-  constructor(jobService: JobsSerive) {
-    this.colonist = new NewColonist(null,this.NO_JOB_SELECTED,null);
+  constructor(jobService: JobsSerive,
+              private formBuilder: FormBuilder ) {
+    
 
     jobService.getJobs().subscribe((jobs) => {
       this.marsJob = jobs;
@@ -35,6 +36,13 @@ export class RegisterComponent implements OnInit {
    }
 
   ngOnInit() {
+
+    this.regForm = new FormGroup({
+      name: new FormControl('',[Validators.required]),
+      age: new FormControl('',[Validators.required]),
+      job_id: new FormControl(this.NO_JOB_SELECTED, [Validators.required])
+    });
+
   }
 
 get notSelected (){
