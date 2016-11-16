@@ -8,9 +8,11 @@
   <from>
     <fieldset>
       <div>
-        <select name="" id="">
+        <select name="alien.type" id="">
           <option [value]="NO_TYPE_SELECTED">--Select alien type--</option>
-          <option value=""></option>
+          <option *ngFor ="let alien of alienType" [value]="alien.type">
+            {{alien.type}}
+          </option>
         </select>
       </div>
 

@@ -11,7 +11,7 @@ export default class AliensService {
 
   constructor( private http: Http) { }
 
-getAlien():Observable<Aliens[]> {
+getAliens():Observable<Aliens[]> {
   return this.http
              .get(this.ALIENS_JSON)
              .map((res: Response) => res.json().types);

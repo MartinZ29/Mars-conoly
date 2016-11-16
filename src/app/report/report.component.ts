@@ -14,7 +14,14 @@ export class ReportComponent implements OnInit {
 
   NO_TYPE_SELECTED = '(none)';
 
-  constructor() { }
+  constructor(aliensService: AliensService) { 
+
+    aliensService.getAliens().subscribe((types) => {
+      this.alienType = types;
+    }, (err) => {
+      console.log(err)
+    });
+  }
 
   ngOnInit() {
   }
