@@ -45,15 +45,9 @@ export class RegisterComponent implements OnInit {
 
   }
 
-get notSelected (){
-  return this.colonist.job_id === this.NO_JOB_SELECTED;
-}
 
  onSubmit(event, form){
     event.preventDefault();
      form.controls.age.invalid = true;
    }
-
-
-
 }
