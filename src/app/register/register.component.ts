@@ -22,8 +22,9 @@ export class RegisterComponent implements OnInit {
 
     jobService.getJobs().subscribe((jobs) => {
       this.marsJob = jobs;
-      
-    });
+      }, (err) => {
+        console.log(err);
+      });
    }
 
   ngOnInit() {
