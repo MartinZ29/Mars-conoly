@@ -2,7 +2,7 @@
 
   <h1 class="page-title">Register</h1>
 
-  <form action="" class="reg-form">
+  <form action="" class="reg-form" #regForm="ngForm">
     <fieldset>
       <input type="text" placeholder="Name" [(ngModel)]="colonist.name" name="name" required minlength="3" class="" />
       <input type="number" placeholder="Age" [(ngModel)]="colonist.age" name="age" required class="" />
@@ -17,7 +17,7 @@
     </fieldset>
 
     <fieldset>
-      <button class="button" [disabled]="notSelected">
+      <button class="button" [disabled]="notSelected || regForm.invalid">
         Check in
       </button>
     </fieldset>
