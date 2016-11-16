@@ -2,10 +2,10 @@
 
   <h1 class="page-title">Register</h1>
 
-  <form action="" class="reg-form" #regForm="ngForm" (ngSubmit)="onSubmit()">
+  <form action="" class="reg-form" #regForm="ngForm" (ngSubmit)="onSubmit($event, regForm)">
     <fieldset>
-      <input type="text" placeholder="Name" [(ngModel)]="colonist.name" name="name" required minlength="3" class="" />
-      <input type="number" placeholder="Age" [(ngModel)]="colonist.age" name="age" required class="" />
+      <input type="text" placeholder="Name" [(ngModel)]="colonist.name" name="name"  minlength="3" class="" />
+      <input type="number" placeholder="Age" [(ngModel)]="colonist.age" name="age"  class="" />
       <div class="occ-select">
         <select required name="job_id" [(ngModel)]="colonist.job_id" id="" class="">
           <option [value]="NO_JOB_SELECTED">--Select a Job--</option>
@@ -17,7 +17,7 @@
     </fieldset>
 
     <fieldset>
-      <button class="button" [disabled]="notSelected || regForm.invalid">
+      <button class="button">
         Check in
       </button>
     </fieldset>

@@ -34,8 +34,9 @@ get notSelected (){
   return this.colonist.job_id === this.NO_JOB_SELECTED;
 }
 
- onSubmit(){
-     alert('works?');
+ onSubmit(event, form){
+    event.preventDefault();
+     form.controls.age.invalid = true;
    }
 
 
