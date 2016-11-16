@@ -31,7 +31,7 @@ export class Job {
     ){}
 }
 
-export class Alliens {
+export class Aliens {
     constructor (
         public type : string,
         public submitted_by : string,
