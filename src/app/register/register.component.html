@@ -2,13 +2,13 @@
 
   <h1 class="page-title">Register</h1>
 
-  <form action="" class="reg-form" #regForm="ngForm">
+  <form action="" class="reg-form" #regForm="ngForm" (ngSubmit)="onSubmit">
     <fieldset>
       <input type="text" placeholder="Name" [(ngModel)]="colonist.name" name="name" required minlength="3" class="" />
       <input type="number" placeholder="Age" [(ngModel)]="colonist.age" name="age" required class="" />
       <div class="occ-select">
         <select required name="job_id" [(ngModel)]="colonist.job_id" id="" class="">
-          <option [value]="NO_JOB_SELECTED">Select a Job</option>
+          <option [value]="NO_JOB_SELECTED">--Select a Job--</option>
           <option *ngFor ="let job of marsJob" [value]="job.id">
             {{job.name}}
           </option>
