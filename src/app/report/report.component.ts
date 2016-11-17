@@ -8,12 +8,12 @@ import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractCo
   selector: 'app-report',
   templateUrl: './report.component.html',
   styleUrls: ['./report.component.css'],
-  providers: [AliensService]
+  providers: [AliensService, EncountersService]
 })
 export class ReportComponent implements OnInit {
 
   marsAlien: Aliens[];
-  regForm: FormGroup;
+  repForm: FormGroup;
 
   NO_TYPE_SELECTED = '(none)';
 
@@ -29,6 +29,10 @@ export class ReportComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.repForm = new FormGroup({
+      atype: new FormControl(this.NO_TYPE_SELECTED, []),
+      action: new FormControl('', [Validators.required, Validators.maxLength(450)])
+    });
   }
 
 }
