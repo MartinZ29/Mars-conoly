@@ -5,7 +5,7 @@
     <span>Safety on Mars is your responsibility</span>
   </h1>
 
-  <form class="rep-form" [formGroup]="repForm" >
+  <form class="rep-form" [formGroup]="repForm" (ngSubmit)="onSubmit($event)" >
     <fieldset>
       <div>
         <select name="alientype" id="" formControlName="atype" >

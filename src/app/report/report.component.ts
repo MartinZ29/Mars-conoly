@@ -35,4 +35,9 @@ export class ReportComponent implements OnInit {
     });
   }
 
+  onSubmit(event) {
+    event.preventDefault();
+    
+  }
+
 }
