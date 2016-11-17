@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Aliens } from '../models';
 import AliensService from '../services/aliens.service';
+import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-report',
@@ -10,18 +11,20 @@ import AliensService from '../services/aliens.service';
 })
 export class ReportComponent implements OnInit {
 
-  // alienType: Aliens[];
+  marsAlien: Aliens[];
+  regForm: FormGroup;
 
-  // NO_TYPE_SELECTED = '(none)';
+  NO_TYPE_SELECTED = '(none)';
 
-  // constructor(aliensService: AliensService) { 
+  constructor(aliensService: AliensService) { 
 
-  //   aliensService.getAliens().subscribe((types) => {
-  //     this.alienType = types;
-  //   }, (err) => {
-  //     console.log(err)
-  //   });
-  // }
+    aliensService.getAliens().subscribe((aliens) => {
+      this.marsAlien = aliens;
+      console.log();
+    }, (err) => {
+      console.log(err)
+    });
+  }
 
   ngOnInit() {
   }

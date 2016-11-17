@@ -7,15 +7,15 @@ import { Aliens } from '../models';
 @Injectable()
 export default class AliensService {
 
-//   ALIENS_JSON = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
+  ALIENS_JSON = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
 
-//   constructor( private http: Http) { }
+  constructor( private http: Http) { }
 
-// getAliens():Observable<Aliens[]> {
-//   return this.http
-//              .get(this.ALIENS_JSON)
-//              .map((res: Response) => res.json().types);
+getAliens():Observable<Aliens[]> {
+  return this.http
+             .get(this.ALIENS_JSON)
+             .map((res: Response) => res.json().aliens);
 
-// }
+}
 
 }

@@ -22,7 +22,8 @@ export class RegisterComponent implements OnInit {
 
 
   constructor(jobService: JobsSerive,
-              private formBuilder: FormBuilder ) {
+              // private formBuilder: FormBuilder 
+              ) {
     
 
     jobService.getJobs().subscribe((jobs) => {
