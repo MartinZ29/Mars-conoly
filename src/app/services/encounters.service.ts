@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response} from '@angular/http';
+import { Http, Response, Headers} from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Encounter, newEncounter } from '../models';
 import 'rxjs/add/operator/map';
@@ -17,5 +17,12 @@ ENCOUNTER_JSON = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
                   .map((res: Response) => res.json().encounters);
     }
 
-    submitRncounter(encounter: newEncounter) : Encounter()
+    submitRncounter(encounter: newEncounter) : Observable<Encounter> {
+
+      const headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+
+      return this.http.post(this.ENCOUNTER_JSON, encounter, { headers})
+                    .map((res: Response) => res.json().encounter);
+    }
 }
