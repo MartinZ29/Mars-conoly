@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Aliens } from '../models';
 import AliensService from '../services/aliens.service';
+import EncountersService from '../services/encounters.service'
 import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
 
 @Component({
@@ -16,7 +17,8 @@ export class ReportComponent implements OnInit {
 
   NO_TYPE_SELECTED = '(none)';
 
-  constructor(aliensService: AliensService) { 
+  constructor(private aliensService: AliensService, 
+              private encountersService: EncountersService ) { 
 
     aliensService.getAliens().subscribe((aliens) => {
       this.marsAlien = aliens;

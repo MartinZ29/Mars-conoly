@@ -23,12 +23,10 @@ export interface Colonist {
     job:Job;
 }
 
-export class Job {
-    constructor(
-        public name : string,
-        public id : number,
-        public description : string,
-    ){}
+export interface Job {
+    name : string;
+    id : number;
+    description : string;
 }
 
 export class Aliens {
