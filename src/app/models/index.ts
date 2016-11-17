@@ -29,13 +29,11 @@ export interface Job {
     description : string;
 }
 
-export class Aliens {
-    constructor (
-        public type : string,
-        public submitted_by : string,
-        public id : number,
-        public description : string,
-    ){}
+export interface Aliens {
+        type : string;
+        submitted_by : string;
+        id : number;
+        description : string;
 }
 
 
@@ -50,11 +48,9 @@ export class newEncounter {
 }
 
 export interface Encounter {
-    constructor (
         atype: string,
         date: string,
         action: string,
         colonist_id: number,
         id: number,
-    )
 }
