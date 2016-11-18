@@ -5,7 +5,7 @@
     </h1>
   </div>
 
-  <ul>
+  <ul class="encounter-list">
     <li *ngFor="let encounter of marsEncounter" [value]="encounter">
       <p>{{encounter.date}} - {{encounter.atype}}</p>
       <p>{{encounter.action}}</p>

@@ -17,7 +17,7 @@ export class EncountersComponent implements OnInit {
   constructor( private encounterService: EncountersService) {
 
     encounterService.getEncounters().subscribe((encounter) => {
-      this.marsEncounter = encounter;
+      this.marsEncounter = encounter.splice(0,100);
     }, (err) => {
       console.log(err);
     });
