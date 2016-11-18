@@ -16,7 +16,7 @@ export class ReportComponent implements OnInit {
   marsAlien: Aliens[];
   repForm: FormGroup;
 
-  NO_TYPE_SELECTED = '';
+  NO_TYPE_SELECTED = '(none)';
 
   constructor(private aliensService: AliensService, 
               private encountersService: EncountersService ) { 
@@ -45,7 +45,7 @@ private getDate() {
   onSubmit(event, form) {
     event.preventDefault();
     if (this.repForm.invalid){
-        
+
     } else {
       const atype = this.repForm.get('atype').value;
       const action = this.repForm.get('action').value;
