@@ -5,7 +5,12 @@
     </h1>
   </div>
 
-  <ul></ul>
+  <ul>
+    <li *ngFor="let encounter of marsEncounter" [value]="encounter">
+      <p>{{encounter.date}} - {{encounter.atype}}</p>
+      <p>{{encounter.action}}</p>
+    </li>
+  </ul>
 
   <div class="footer">
     <div class="button">

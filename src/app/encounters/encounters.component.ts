@@ -1,13 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+import EncountersService from '../services/encounters.service';
+import { newEncounter, Encounter} from '../models';
+import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms'; 
 
 @Component({
   selector: 'app-encounters',
   templateUrl: './encounters.component.html',
-  styleUrls: ['./encounters.component.css']
+  styleUrls: ['./encounters.component.css'],
+  providers: [EncountersService]
 })
 export class EncountersComponent implements OnInit {
 
-  constructor() { }
+  encounter: newEncounter;
+  marsEncounter: Encounter[];
+
+  constructor( private encounterService: EncountersService) {
+
+    encounterService.getEncounters().subscribe((encounter) => {
+      this.marsEncounter = encounter;
+    }, (err) => {
+      console.log(err);
+    });
+
+   }
 
   ngOnInit() {
   }
