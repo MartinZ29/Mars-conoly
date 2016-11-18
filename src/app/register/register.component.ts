@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewColonist, Job } from '../models';
 import JobsSerive from '../services/jobs.service';
+import ColonistsService from '../services/colonists.service';
 import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
 import { cantBe, tooOld} from '../shared/Validators'; 
 import { Router } from '@angular/router';
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  providers: [JobsSerive]
+  providers: [JobsSerive, ColonistsService]
 })
 export class RegisterComponent implements OnInit {
 
@@ -23,8 +24,8 @@ export class RegisterComponent implements OnInit {
 
 
   constructor(private jobService: JobsSerive,
-              private router: Router
-              // private formBuilder: FormBuilder 
+              private colonistService: ColonistsService,
+              private router: Router 
               ) {
     
 
@@ -34,19 +35,6 @@ export class RegisterComponent implements OnInit {
         console.log(err);
       });
    }
-
-// cantBe(value: string): ValidatorFn {
-//   return (control: AbstractControl): {[Key: string]: any} => {
-//     return control.value === value ? {'cant be value': {value}} : null;
-//   };
-// }
-
-// tooOld(value: number): ValidatorFn {
-//   return (control: AbstractControl): {[Key: string]: any} => {
-//     return control.value > 130 ? {'too old': {value}} : null;
-//   }
-// }
-
 
   ngOnInit() {
 
@@ -68,12 +56,17 @@ export class RegisterComponent implements OnInit {
       const name = this.regForm.get('name').value;
       const age = this.regForm.get('age').value;
       const job_id = this.regForm.get('job_id').value;
-      // const colonist = this.regForm.get(['name','job_id','age'])
+      const colonist = new NewColonist(name, age, job_id);
       console.log('OK, let\'s register this new colonist:', new NewColonist(name, job_id, age))
-      this.router.navigate(['/encounters']);
-    }
 
-    //  form.controls.age.invalid = true;
+      this.colonistService.submitColonist(colonist)
+          .subscribe((colonist) => {
+            localStorage.setItem('colonist_id', JSON.stringify(colonist.id))
+            this.router.navigate(['/encounters']);
+          }, (err) => {
+            console.log('there is an error', err);
+          });
+    }
    }
 }
 

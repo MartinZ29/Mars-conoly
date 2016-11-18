@@ -52,6 +52,7 @@ private getDate() {
       const atype = this.repForm.get('atype').value;
       const action = this.repForm.get('action').value;
       const date = this.getDate();
+      
       const encounter = new newEncounter(atype, action, date, 4 )
       // const colonist_id = this.repForm.get('colonist_id').value;
       console.log( new newEncounter(atype, action, date, 4) )
