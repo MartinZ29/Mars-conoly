@@ -43,7 +43,7 @@ export class newEncounter {
         public atype: string,
         public action: string,
         public date: string,
-        public colonist_id: number,
+        public colonist_id: string,
     ) {}
 }
 

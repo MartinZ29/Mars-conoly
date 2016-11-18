@@ -60,8 +60,8 @@ export class RegisterComponent implements OnInit {
       console.log('OK, let\'s register this new colonist:', new NewColonist(name, job_id, age))
 
       this.colonistService.submitColonist(colonist)
-          .subscribe((colonist) => {
-            localStorage.setItem('colonist_id', JSON.stringify(colonist.id))
+          .subscribe((response) => {
+            localStorage.setItem('colonist_id', JSON.stringify(response.id))
             this.router.navigate(['/encounters']);
           }, (err) => {
             console.log('there is an error', err);
