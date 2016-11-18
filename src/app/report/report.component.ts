@@ -55,10 +55,10 @@ private getDate() {
       const encounter = new newEncounter(atype, action, date, 4 )
       // const colonist_id = this.repForm.get('colonist_id').value;
       console.log( new newEncounter(atype, action, date, 4) )
-      this.router.navigate(['/encounters']);
 
       this.encountersService.submitEncounter(encounter)
           .subscribe((enc) => {
+            this.router.navigate(['/encounters']);
             console.log('got encounter:', enc);
           }, (err) => {
             console.log('there was an error', err);
