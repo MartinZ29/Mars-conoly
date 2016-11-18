@@ -41,8 +41,8 @@ export interface Aliens {
 export class newEncounter {
     constructor (
         public atype: string,
-        public date: string,
         public action: string,
+        public date: string,
         public colonist_id: number,
     ) {}
 }
