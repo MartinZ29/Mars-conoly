@@ -56,7 +56,7 @@ export class RegisterComponent implements OnInit {
       const name = this.regForm.get('name').value;
       const age = this.regForm.get('age').value;
       const job_id = this.regForm.get('job_id').value;
-      const colonist = new NewColonist(name, age, job_id);
+      const colonist = new NewColonist(name, job_id, age);
       console.log('OK, let\'s register this new colonist:', new NewColonist(name, job_id, age))
 
       this.colonistService.submitColonist(colonist)
