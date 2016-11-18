@@ -4,6 +4,7 @@ import AliensService from '../services/aliens.service';
 import EncountersService from '../services/encounters.service'
 import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
 import { cantBe } from '../shared/Validators'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-report',
@@ -19,7 +20,8 @@ export class ReportComponent implements OnInit {
   NO_TYPE_SELECTED = '(none)';
 
   constructor(private aliensService: AliensService, 
-              private encountersService: EncountersService ) { 
+              private encountersService: EncountersService,
+              private router: Router ) { 
 
     aliensService.getAliens().subscribe((aliens) => {
       this.marsAlien = aliens;
@@ -53,6 +55,7 @@ private getDate() {
       const encounter = new newEncounter(atype, action, date, 4 )
       // const colonist_id = this.repForm.get('colonist_id').value;
       console.log( new newEncounter(atype, action, date, 4) )
+      this.router.navigate(['/encounters']);
 
       this.encountersService.submitEncounter(encounter)
           .subscribe((enc) => {
