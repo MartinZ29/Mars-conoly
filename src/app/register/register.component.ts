@@ -3,6 +3,7 @@ import { NewColonist, Job } from '../models';
 import JobsSerive from '../services/jobs.service';
 import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
 import { cantBe, tooOld} from '../shared/Validators'; 
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -21,7 +22,8 @@ export class RegisterComponent implements OnInit {
   NO_JOB_SELECTED = '(none)';
 
 
-  constructor(jobService: JobsSerive,
+  constructor(private jobService: JobsSerive,
+              private router: Router
               // private formBuilder: FormBuilder 
               ) {
     
@@ -68,6 +70,7 @@ export class RegisterComponent implements OnInit {
       const job_id = this.regForm.get('job_id').value;
       // const colonist = this.regForm.get(['name','job_id','age'])
       console.log('OK, let\'s register this new colonist:', new NewColonist(name, job_id, age))
+      this.router.navigate(['/encounters']);
     }
 
     //  form.controls.age.invalid = true;
