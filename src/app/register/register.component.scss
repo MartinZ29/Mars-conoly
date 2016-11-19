@@ -3,6 +3,8 @@
 .reg-container {
     background: #000;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /*   title  here   !!!!!!!!!  */
@@ -10,12 +12,20 @@
     text-align: center;
     padding: 2rem 1rem;
     color: white;
+    font-size: 2rem;
 }
 
 /*  reg form  here    !!!!!   */
 .reg-form {
-    width: 100%;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+}
+
+fieldset {
+    display: flex;
+    flex: 1;
 }
 
 .reg-form input {
