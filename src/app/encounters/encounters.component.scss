@@ -19,7 +19,7 @@
 
 /*   list  here  !!!!!!!!!*/
 .encounter-list {
-    height: 70vh;
+    flex: 1;
     overflow: scroll;
     padding: 0 1rem 2rem 1rem;
 }
@@ -28,7 +28,12 @@
 /*   button  here   !!!!!!!!*/
 
 .footer {
+    flex: 0.5;
     padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
 }
 
 .button {
