@@ -42,6 +42,7 @@ input {
     width: 100%;
     background: 0 0;
     color: white;
+    font-size: 1rem;
 }
 
 ::-webkit-input-placeholder {
@@ -63,6 +64,11 @@ input {
     background: 0 0;
     color: white;
     width: 100%;
+    font-size: 1rem;
+}
+
+.occ-select select.placeholder {
+    color: #ed4343;
 }
 
 /*  buttion  here   !!!!!!!*/
