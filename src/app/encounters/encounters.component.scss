@@ -1,6 +1,8 @@
 /*  container  here  !!!!*/
 .en-container {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -8,13 +10,12 @@
 .page-title {
     text-align: center;
     padding: 2rem 1rem;
+    font-size: 2rem;
+    span {
+        font-size: 1rem;
+        display: block;
+    }
 }
-
-.page-title span{
-    display: block;
-    font-size: 1rem;
-}
-
 
 /*   list  here  !!!!!!!!!*/
 .encounter-list {
