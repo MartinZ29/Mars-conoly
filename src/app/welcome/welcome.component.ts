@@ -11,13 +11,13 @@ import { Component, OnInit, HostBinding, trigger, transition, animate, style, st
     trigger('routeAnimation', [
       state('*',
       style({
-        width:100%,
+        width:'100%',
         opacity:1,
         transform:'translateX(0)'
       })),
       transition('void => *', [
         style({
-          width:100%,
+          width:'100%',
           opacity:0,
           transform:'translateX(-100%)'
         }),
@@ -25,7 +25,7 @@ import { Component, OnInit, HostBinding, trigger, transition, animate, style, st
       ]),
       transition('* => void', [
         animate('1s ease-in', style({
-          width:100%,
+          width:'100%',
           opacity:0,
           transform:'translateX(100%)'
         }))
