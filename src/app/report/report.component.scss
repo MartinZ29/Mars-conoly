@@ -1,0 +1,33 @@
+/*   container   here  !!!!!!*/
+.report-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background-color: black;
+}
+
+/*   title  here  !!!!*/
+.report-title {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 2rem;
+    color: white;
+    span {
+        font-size: 1rem;
+        display: block;
+    }
+}
+
+/*   form  here  !!!!! */ 
+.rep-form {
+    flex: 4;
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*  content here  !!!!*/
+fieldset {
+    flex: 1;
+}
