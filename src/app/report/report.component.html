@@ -7,7 +7,7 @@
 
   <form class="rep-form" [formGroup]="repForm" (ngSubmit)="onSubmit($event)" >
     <fieldset>
-      <div>
+      <div class="alientype-sel">
         <select name="alientype" id="" formControlName="atype" >
           <option [value]="NO_TYPE_SELECTED">--Select alien type--</option> 
           <option *ngFor ="let alien of marsAlien" [value]="alien.type">
