@@ -4,7 +4,7 @@
 @import "assets/css/reset.css";
 @import "assets/css/font.css";
 
-body {
+html, body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: white;
