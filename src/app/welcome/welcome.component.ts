@@ -38,7 +38,17 @@ import { Component, OnInit, HostBinding, trigger, transition, animate, style, st
 export class WelcomeComponent implements OnInit {
 
 // add @Hostbinding  return true;
+@HostBinding('@routeAnimation') get routeAnimation (){
+  return true;
+}
 
+@HostBinding('style.display') get display() {
+  return true;
+}
+
+@HostBinding('style.position') get position() {
+  return true;
+}
 
   constructor() { }
 
