@@ -13,21 +13,21 @@ import { Component, OnInit, HostBinding, trigger, transition, animate, style, st
       style({
         width:'100%',
         opacity:1,
-        transform:'translateX(0)'
+        transform:'translateY(0)'
       })),
       transition('void => *', [
         style({
           width:'100%',
           opacity:0,
-          transform:'translateX(-100%)'
+          transform:'translateY(0)'
         }),
-        animate('1s ease-out')
+        animate('1s ease-in')
       ]),
       transition('* => void', [
-        animate('1s ease-in', style({
+        animate('1s ease-out', style({
           width:'100%',
           opacity:0,
-          transform:'translateX(100%)'
+          transform:'translateY(100%)'
         }))
       ])
     ])
@@ -43,11 +43,11 @@ export class WelcomeComponent implements OnInit {
 }
 
 @HostBinding('style.display') get display() {
-  return true;
+  return 'block';
 }
 
 @HostBinding('style.position') get position() {
-  return true;
+  return 'absolute';
 }
 
   constructor() { }
