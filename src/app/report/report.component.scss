@@ -35,4 +35,15 @@ fieldset {
         border-bottom: 1px solid white;
         width: 100%;
     }
+    .alientype-sel select {
+        border: 1px solid transparent;
+        padding-left: 0.5rem;
+        background: 0 0;
+        color: white;
+        width: 100%;
+        font-size: 1rem;
+    }
+    .alientype-sel select.placeholder {
+        color: #ed4343;
+    }
 }
