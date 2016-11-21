@@ -1,8 +1,8 @@
+@import '../mixins/_theme.scss';
+
 /*   container   here  !!!!!!*/
 .report-container {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
+    @include container;
     background-color: black;
 }
 

@@ -1,11 +1,11 @@
+@import '../mixins/_theme.scss';
+
 /*   container   here  !!!!!!!!    */
 .page-container {
+    @include container;
     background: linear-gradient(rgba(0,0,0,0.8),rgba(237,67,67,0.7)), url('../../assets/img/Mars.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }

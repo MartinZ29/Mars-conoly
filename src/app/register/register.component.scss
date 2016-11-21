@@ -1,10 +1,10 @@
+@import '../mixins/_theme.scss';
+
 /*   reg-container  here !!!!!!*/
 
 .reg-container {
     background: #000;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+    @include container;
 }
 
 /*   title  here   !!!!!!!!!  */
