@@ -1,6 +1,6 @@
 # MarsColony
 
-![image]()
+![image](https://github.com/MartinZ29/project5/blob/master/documentation/screenshot.png)
 
 ##Technology used
 
