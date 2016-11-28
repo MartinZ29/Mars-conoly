@@ -1,14 +1,16 @@
 # MarsColony
 
+![image]()
+
 ##Technology used
 
 Angular 2
 
 Typescript
 
-Sass/ CSS
+Sass/ CSS/ CSS3
 
-HTML5
+HTML5/ HTML
 
 ## About
 
