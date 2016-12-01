@@ -4,7 +4,7 @@ import AliensService from '../services/aliens.service';
 import EncountersService from '../services/encounters.service'
 import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
 import { cantBe } from '../shared/Validators'
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-report',

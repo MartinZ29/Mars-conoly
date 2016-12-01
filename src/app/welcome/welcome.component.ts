@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding, trigger, transition, animate, style, state } from '@angular/core';
+import { Router, ActivatedRoute} from '@angular/router';
 // import trigger,animate.. first
 @Component({
   selector: 'app-welcome',

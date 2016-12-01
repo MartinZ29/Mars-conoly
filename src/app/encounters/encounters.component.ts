@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import EncountersService from '../services/encounters.service';
 import { newEncounter, Encounter} from '../models';
-import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms'; 
+import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
+import { Router, ActivatedRoute} from '@angular/router'; 
 
 @Component({
   selector: 'app-encounters',

@@ -4,7 +4,7 @@ import JobsSerive from '../services/jobs.service';
 import ColonistsService from '../services/colonists.service';
 import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
 import { cantBe, tooOld} from '../shared/Validators'; 
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute} from '@angular/router';
 
 
 @Component({
