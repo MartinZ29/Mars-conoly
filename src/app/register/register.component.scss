@@ -1,18 +1,15 @@
 @import '../mixins/_theme.scss';
 
 /*   reg-container  here !!!!!!*/
-
 .reg-container {
     background: #000;
     @include container;
 }
-
 /*   title  here   !!!!!!!!!  */
 .page-title {
     text-align: center;
     padding: 2rem 1rem;
 }
-
 /*  reg form  here    !!!!!   */
 .reg-form {
     padding: 0 2rem;
@@ -20,7 +17,6 @@
     flex-direction: column;
     flex: 4;
 }
-
 fieldset {
     display: flex;
     flex: 1;
@@ -28,9 +24,7 @@ fieldset {
 
 .reg-form input {
     margin-bottom: 1.5rem;
-    
 }
-
 input {
     border: none;
     border-bottom: 1px solid #fff;
@@ -42,20 +36,15 @@ input {
     color: white;
     font-size: 1rem;
 }
-
 ::-webkit-input-placeholder {
     color: #ed4343;
 }
-
-
 /*  select form   here !!!!!!!  */
-
 .occ-select {
     height: 2rem;
     border-bottom: 1px solid white;
     width: 100%;
 }
-
 .occ-select select {
     border: 1px solid transparent;
     padding-left: 0.5rem;
@@ -65,13 +54,10 @@ input {
     font-size: 1rem;
     -webkit-appearance: none;
 }
-
 .occ-select select.placeholder {
     color: #ed4343;
 }
-
 /*  buttion  here   !!!!!!!*/
-
 .button {
     width: 100%;
     color: white;
@@ -82,7 +68,6 @@ input {
     border: none;
     box-shadow: none;
 }
-
 .button a{
     text-decoration: none;
 }

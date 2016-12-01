@@ -15,16 +15,12 @@ export class EncountersComponent implements OnInit {
   marsEncounter: Encounter[];
 
   constructor( private encounterService: EncountersService) {
-
     encounterService.getEncounters().subscribe((encounter) => {
       this.marsEncounter = encounter.splice(0,100);
     }, (err) => {
       console.log(err);
     });
-
    }
-
   ngOnInit() {
   }
-
 }

@@ -16,7 +16,6 @@ export class ReportComponent implements OnInit {
 
   marsAlien: Aliens[];
   repForm: FormGroup;
-
   NO_TYPE_SELECTED = '(none)';
 
   constructor(private aliensService: AliensService, 
@@ -38,7 +37,6 @@ export class ReportComponent implements OnInit {
     });
   }
 
-
 private getDate() {
   const date = new Date();
   return `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
@@ -47,15 +45,12 @@ private getDate() {
   onSubmit(event, form) {
     event.preventDefault();
     if (this.repForm.invalid){
-
     } else {
       const atype = this.repForm.get('atype').value;
       const action = this.repForm.get('action').value;
       const date = this.getDate();
       const colonist_id = localStorage.getItem('colonist_id');
       const encounter = new newEncounter(atype, action, date, colonist_id)
-      // console.log( new newEncounter(atype, action, date, 4) )
-
       this.encountersService.submitEncounter(encounter)
           .subscribe((enc) => {
             this.router.navigate(['/encounters']);

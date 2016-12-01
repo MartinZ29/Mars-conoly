@@ -6,8 +6,6 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export default class ColonistsService {
-
-
 COLONIST_JSON = 'https://red-wdp-api.herokuapp.com/api/mars/colonists';
 
   constructor( private http: Http) { }
@@ -19,5 +17,4 @@ COLONIST_JSON = 'https://red-wdp-api.herokuapp.com/api/mars/colonists';
       return this.http.post(this.COLONIST_JSON, {colonist}, {headers})
                       .map((res: Response) => res.json().colonist);
   }
-
 }

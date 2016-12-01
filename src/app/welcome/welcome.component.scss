@@ -1,5 +1,4 @@
 @import '../mixins/_theme.scss';
-
 /*   container   here  !!!!!!!!    */
 .page-container {
     @include container;
@@ -9,25 +8,18 @@
     justify-content: space-around;
     align-items: center;
 }
-
-
-
-
 /*   content styling here !!!!!!!!!*/
-
 /*   title  here  !!!!!!!         */
 .main-title {
     text-transform: uppercase;
     padding: 0 1rem;
 }
-
 /*   button  here !!!!!!!!!!!!     */
 .enter-button {
     height: 100px;
     width: 100px;
     position: relative;
 }
-
 .enter-button a{
     display: block;
     height: 100%;
@@ -39,7 +31,6 @@
     animation: pulse 2s infinite;
     -webkit-animation: pulse 2s infinite;
 }
-
 @keyframes pulse {
     0% {
         transform: scale(0.4);
@@ -62,5 +53,4 @@
         opacity: 0;
     }
 }
-
 /*   subtitle  here   !!!!!!!!!!!!!*/

@@ -8,14 +8,11 @@ import { Aliens } from '../models';
 export default class AliensService {
 
   ALIENS_JSON = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
-
   constructor( private http: Http) { }
 
 getAliens():Observable<Aliens[]> {
   return this.http
              .get(this.ALIENS_JSON)
              .map((res: Response) => res.json().aliens);
-
 }
-
 }

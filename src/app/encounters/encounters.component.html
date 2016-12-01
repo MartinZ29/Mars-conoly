@@ -4,18 +4,15 @@
       <span>See an Alien? Report it!</span>
     </h1>
   </div>
-
   <ul class="encounter-list">
     <li *ngFor="let encounter of marsEncounter" [value]="encounter">
       <p>{{encounter.date}} - {{encounter.atype}}</p>
       <p>{{encounter.action}}</p>
     </li>
   </ul>
-
   <div class="footer">
     <div class="button">
       <a routerLink="/report" routerLinkActive="active">Report Encounter</a>
     </div>
   </div>
-
 </div>  <!--   en-container   -->

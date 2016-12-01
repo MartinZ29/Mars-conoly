@@ -8,7 +8,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/roboto-bold-webfont.eot');
@@ -18,5 +17,4 @@
          url('../fonts/roboto-bold-webfont.svg#robotobold') format('svg');
     font-weight: bold;
     font-style: normal;
-
 }

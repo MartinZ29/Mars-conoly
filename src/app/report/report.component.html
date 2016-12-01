@@ -1,10 +1,8 @@
 <div class="report-container">
-
   <h1 class="report-title">
     Report Encounter
     <span>Safety on Mars is your responsibility</span>
   </h1>
-
   <form class="rep-form" [formGroup]="repForm" (ngSubmit)="onSubmit($event)" >
     <fieldset>
       <div class="alientype-sel">
@@ -15,10 +13,8 @@
           </option>
         </select>
       </div>
-
       <textarea formControlName="action" placeholder="Action taken" class="textarea" cols="30" rows="10"></textarea>
     </fieldset>
-    
     <fieldset>
       <button class="submit-btn">
         Submit Report

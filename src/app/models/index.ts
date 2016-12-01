@@ -1,13 +1,3 @@
-// export class Encounter {
-//     constructor(
-//         public atype : string,
-//         public id : number,
-//         public date : string,
-//         public colonist_id : number,
-//         public action : string,
-//     ) {}
-// }
-
 export class NewColonist {
     constructor(
         public name : string,
@@ -35,8 +25,6 @@ export interface Aliens {
         id : number;
         description : string;
 }
-
-
 
 export class newEncounter {
     constructor (

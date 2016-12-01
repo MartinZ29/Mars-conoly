@@ -7,7 +7,6 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export default class EncountersService {
 
-
 ENCOUNTER_JSON = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 
   constructor( private http: Http) { }

@@ -1,7 +1,5 @@
 import { Component, OnInit, HostBinding, trigger, transition, animate, style, state } from '@angular/core';
-
 // import trigger,animate.. first
-
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
@@ -32,24 +30,18 @@ import { Component, OnInit, HostBinding, trigger, transition, animate, style, st
       ])
     ])
   ]
-
-
 })
 export class WelcomeComponent implements OnInit {
-
 // add @Hostbinding  return true;
 @HostBinding('@routeAnimation') get routeAnimation (){
   return true;
 }
-
 @HostBinding('style.display') get display() {
   return 'block';
 }
-
 @HostBinding('style.position') get position() {
   return 'absolute';
 }
-
   constructor() { }
 
   ngOnInit() {
